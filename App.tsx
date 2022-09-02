@@ -39,20 +39,22 @@ export default function App() {
         />{' '}
         <button onClick={handleClickBtInput}>Input</button>
       </p>
-      <table>
-        <tr>
-          <th>Word</th>
-          <th>Vowels</th>
-          <th>Consonants</th>
-        </tr>
-        {texts.map((aText, index) => (
-          <tr key={index}>
-            <td>{aText}</td>
-            <td>{getVowels(aText)}</td>
-            <td>{getConsonants(aText)}</td>
+      {texts.length > 0 && (
+        <table>
+          <tr>
+            <th>Word</th>
+            <th>Vowels</th>
+            <th>Consonants</th>
           </tr>
-        ))}
-      </table>
+          {texts.map((aText, index) => (
+            <tr key={index}>
+              <td>{aText}</td>
+              <td>{getVowels(aText)}</td>
+              <td>{getConsonants(aText)}</td>
+            </tr>
+          ))}
+        </table>
+      )}
       {/*<CounterRegex title="Vowels" text={text} regex={regexVowels} />
       <CounterRegex title="Consonants" text={text} regex={regexConsonants} />*/}
     </div>
