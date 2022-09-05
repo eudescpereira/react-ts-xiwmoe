@@ -1,3 +1,9 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 h1,
 p {
   font-family: Lato;
@@ -44,7 +50,7 @@ p {
   color: #888;
 }
 
-table {
-  border-width: 1px;
-  border-color: white;
+tbody {
+  border-width: 2px;
+  border-color: black;
 }

@@ -40,18 +40,26 @@ export default function App() {
         <button onClick={handleClickBtInput}>Input</button>
       </p>
       {texts.length > 0 && (
-        <table>
-          <tr>
-            <th>Word</th>
-            <th>Vowels</th>
-            <th>Consonants</th>
-          </tr>
-          {texts.map((aText, index) => (
-            <tr key={index}>
-              <td>{aText}</td>
-              <td>{getVowels(aText)}</td>
-              <td>{getConsonants(aText)}</td>
+        <table style={{ border: 'solid 1px black', width: '100%' }}>
+          <thead>
+            <tr key={text}>
+              <th>Word</th>
+              <th>Vowels</th>
+              <th>Consonants</th>
             </tr>
+          </thead>
+          {texts.map((aText, index) => (
+            <tbody style={{ border: 'solid 1px black', width: '100%' }}>
+              <tr key={index}>
+                <td style={{ border: '1px black', width: '100%' }}>{aText}</td>
+                <td style={{ border: '1px black', width: '100%' }}>
+                  {getVowels(aText)}
+                </td>
+                <td style={{ border: '1px black', width: '100%' }}>
+                  {getConsonants(aText)}
+                </td>
+              </tr>
+            </tbody>
           ))}
         </table>
       )}
